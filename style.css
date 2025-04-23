@@ -3,6 +3,22 @@
 
 }
 .logo-text{
-    color: rgba(0, 0, 0, 0.763);
+    color: rgba(255, 255, 255, 0.763);
     font-family: monospace;
+}
+.navbar{
+    background-color: rgb(0, 0, 0);
+}
+.navbar-nav a{
+    color: aliceblue;
+}
+.navbar-nav a:hover{
+    color: rgb(72, 72, 72);
+}
+.poster{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./images/1218911.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
