@@ -12,6 +12,32 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <!-- email js file -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                
+                emailjs.init({
+                publicKey: "NpL4UwX17y3tl54lo",
+                });
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    emailjs.sendForm("service_3juf4eo", "template_lh23z6m", this)
+                        .then(() => {
+                            console.log('SUCCESS!');
+                        }, (error) => {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
+
+    
 
 
 
@@ -32,14 +58,15 @@
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse d-flex justify-content-end d-md- " id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
+                    <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                        <div class="navbar-nav ">
                             <!-- home section -->
                             <a class="nav-link active" aria-current="page" href="#home">Home</a>
                             <!-- About -->
                             <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="#skills">Skills</a>
                             <a class="nav-link" href="#portfolio">Portfolio</a>
-                            <a class="nav-link" href="#services">Services</a>
+                            <a class="nav-link" href="#resume">Resume</a>
                             <a class="nav-link" href="#contact">Contact</a>
                         </div>
                     </div>
@@ -48,21 +75,229 @@
         </div>
         <!-- landing poster #main -->
         <div class="poster container-fluid m-0 p-0">
-            
+            <!-- hedding -->
+            <div class="poster-content container">
+                <div class="insider container  ">
+                    <h1>Hi Am Ramesh Raveendran... <br> Am a MERN stack
+                        Developer </h1>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="socialmedia-icons container-fluid">
+            <a href="">LinkedIn</a>
+            <a href="">Github</a>
+            <a href="">x</a>
         </div>
         <!-- about -->
+        <div id="about" class="about container p-5 d-flex justify-content-center align-items-center">
+            <div class="container  ">
+                <div class="card text-center ">
+                    <div class="card-header ">
+                        <h1>About</h1>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title ">Hi Am Ramesh Raveendran</h5>
+                        <img class="img-fluid w-25 rounded-3" src="images/ProfilePicture.jpg" alt="profile">
+                        <p class="card-text">Hi am Ramesh am from kerala . And am interested in coding and develops
+                            impressive designs to the world of webdevelopment</p>
+                        <h2>UI/UX Designer &amp; Web Developer.</h2>
+                        <div class="col-lg-12 d-flex justify-content-center align-content-center">
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>24 Aug
+                                        1996</span></li>
+
+                                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 7736
+                                        58 3533</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>kochi
+                                        Kerala India </span></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-12  d-flex justify-content-center align-content-center">
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>28</span>
+                                </li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong>
+                                    <span>Master</span>
+                                </li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                                    <span>rameshraveendranm@gmail.com</span>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+
+                        <a href="#" class="btn btn-dark">Contact Me </a>
+                    </div>
+                    <div class="card-footer text-body-secondary">
+                        2 days ago
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
         <!-- skills -->
+        <div id="skills" class="skills container d-flex justify-content-center align-items-center mb-5 ">
+            <div class="container">
+                <h1>Skills</h1>
+                <hr>
+                <h1>HTML</h1>
+                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="60"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 60%">60%</div>
+                </div>
+                <h1>CSS</h1>
+                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="65"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 65%">65%</div>
+                </div>
+                <h1>JAVA SCRIPT</h1>
+                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="15"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 15%">15%</div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
         <!-- resume -->
+        <div id="resume" class="resume container">
+            <h1>Resume</h1>
+            <hr>
+            <div class="container d-flex justify-content-center align-items-center gap-5">
+
+                <div class="p-3">
+                    <h3 class="resume-title p-3">Sumary</h3>
+
+                    <div class="resume-item p-3">
+                        <h2>Ramesh Raveendran</h2>
+
+                        <ul class="">
+                            <li>
+                                <h6>Location</h6>Kochi,Kerala,India
+                            </li>
+                            <li>
+                                <h6>Contact Number</h6>+91 7736 58 3533
+                            </li>
+                            <li>
+                                <h6>Email</h6>rameshraveendranm@gmail.com
+                            </li>
+                        </ul>
+                    </div><!-- Edn Resume Item -->
+
+                    <h3 class="resume-title p-3 ">Education</h3>
+                    <div class="resume-item">
+                        <h4>Bachelor of Arts &amp; History</h4>
+                        <h5>2015 - 2016</h5>
+                        <p>Mahathma Gandhi Univercity Kottayam</p>
+                    </div><!-- Edn Resume Item -->
+
+                    <h3 class="resume-title p-3">Professional Experience</h3>
+                    <div class="resume-item">
+                        <h4>Industrial Welder</h4>
+                        <h5>2024 present</h5>
+                        <p>Kottayam</p>
+                    </div><!-- Edn Resume Item -->
+                </div>
+            </div>
+        </div>
+        <hr>
         <!-- portfolio -->
+
+        <div id="portfolio" class="container portfolio d-flex justify-content-center align-items-center ">
+
+            <div class="col-xl-12 ">
+                <h1>Portfolios</h1>
+                <hr>
+                <div class="container d-xl-flex">
+                    <!-- paper grid -->
+                    <div class="card col-xm-12 col-xl-4 m-5 " style="width: 18rem;">
+                        <img src="./images/papergridss.png" class="card-img-top" alt="Paper gird">
+                        <div class="card-body">
+                            <h5 class="card-title">Paper Grid</h5>
+
+                            <a href="https://rameshraveendran.github.io/papergrid.com/" class="btn btn-primary">Visit
+                                The Page</a>
+                        </div>
+                    </div>
+                    <!-- starbucks -->
+                    <div class="card col-xm-12 col-xl-4 m-5" style="width: 18rem;">
+                        <img src="./images/starbuckss.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">starbucks Home Page</h5>
+
+                            <a href="https://rameshraveendran.github.io/starbucks.com/" class="btn btn-primary">Visit
+                                The Page</a>
+                        </div>
+                    </div>
+                    <!-- moveit -->
+                    <div class="card col-xm-12 col-xl-4 m-5 " style="width: 18rem;">
+                        <img src="./images/moveit.png" class="card-img-top" alt="moveit">
+                        <div class="card-body">
+                            <h5 class="card-title">MoveIt </h5>
+
+                            <a href="https://rameshraveendran.github.io/Moveit.com/" class="btn btn-primary">Visit The
+                                Page</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <hr>
         <!-- contact form -->
+        <div id="contact" class="contact container mb-5">
+            <h1>Contact Me</h1>
+            <hr>
+            <div class="container d-flex  ">
+                <div class="container mt-5  ">
+                    <form action="#home" id="contact-form"
+                        class="d-flex flex-column justify-content-center align-items-center ">
+                        <div   
+                            class="form-group d-flex flex-column justify-content-center align-items-center gap-3 w-75 ">
+
+                            <input type="text" placeholder="Full Name" class="form-control  " id="name" name="name"
+                                required>
+
+
+                            <input type="text" placeholder="Email" class="form-control" id="email" name="email"
+                                required>
+
+                            <input type="subject" placeholder="subject" class="form-control " id="subject"
+                                name="subject" required>
+
+
+                            <textarea class="form-control" placeholder="Message" id="message"
+                                style="height: 100px"></textarea>
+                            </textarea>
+                        </div>
+                        <button action="#home" type="submit " value="send" class="btn btn-primary mt-4 w-75 ">Submit</button>
+
+
+                        <div class="form-message"></div>
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+        <hr>
         <!-- footer -->
         <!-- copyright -->
     </div>
 
     <!-- js -->
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    
 </body>
 
 </html>
